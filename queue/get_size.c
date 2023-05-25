@@ -18,7 +18,6 @@ void enqueue(int data);
 void printQueue();
 void getSize();
 
-
 // main method start here ...
 int main()
 {
