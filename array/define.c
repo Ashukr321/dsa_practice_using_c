@@ -1,4 +1,6 @@
 #include<stdio.h>
+// preprocessor 
+
 
 int main(){
     int arr[5] = {2, 6, 8, 9, 6};
