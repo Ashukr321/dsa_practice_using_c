@@ -63,6 +63,17 @@ struct Node *inserAtEnd(struct Node *head, int data)
     return head;
 }
 
+
+// updation at end of the linked list 
+struct Node *updateAtEnd(struct Node *head , int data){
+    struct Node *temp= head; 
+
+    while(temp->next!=NULL){
+        temp = temp->next;
+    }
+    temp->data= data;
+    return head;
+}
 // main method start here
 int main()
 {
@@ -74,6 +85,7 @@ int main()
     head = inserAtEnd(head, 4);
     head = inserAtEnd(head, 12);
     head = inserAtEnd(head, 34);
+    head= updateAtEnd(head,40);
     // insertion at end of the node
     int size = printNode(head);
     printf("\nthe sizeof the linked list  is %d", size);
