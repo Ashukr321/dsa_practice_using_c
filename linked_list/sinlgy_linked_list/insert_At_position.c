@@ -97,6 +97,24 @@ struct Node *updateAtpostion(struct Node *head ,int pos,int data){
     temp->data = data;
     return head;
 }
+
+// searching a key in the linked list and return its postion 
+int search(struct Node *head, int key){
+    struct Node *temp = head;
+    int cnt = 0;
+
+    while (temp!=NULL)
+    {
+        cnt++;
+        if (temp->data==key)
+        {
+            break;
+        }
+        temp= temp->next; 
+    }
+    return cnt;
+    
+}
 // main method start here ...😎
 int main()
 {
@@ -109,6 +127,9 @@ int main()
     head = insertAtBegin(head, 42);
     head= insertAtPostion(head,2,400);
     head= updateAtpostion(head,4,1000);
+    int key = 23;
+    int index = search(head,key);
+    printf("%d index of %d \n",index,key);
     printNode(head);
     return 0;
 }
