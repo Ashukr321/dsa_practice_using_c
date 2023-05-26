@@ -80,6 +80,23 @@ struct Node *insertAtPostion(struct Node *head, int pos, int data)
     return head;
 
 }
+// update at position 
+struct Node *updateAtpostion(struct Node *head ,int pos,int data){
+    struct Node *temp = head;
+    int cnt = 0;
+    while (temp->next!=NULL)
+    {
+        cnt++;
+       if (cnt==pos)
+       {
+            break;
+       }
+       temp= temp->next;
+       
+    }
+    temp->data = data;
+    return head;
+}
 // main method start here ...😎
 int main()
 {
@@ -91,6 +108,7 @@ int main()
     head = insertAtBegin(head, 42);
     head = insertAtBegin(head, 42);
     head= insertAtPostion(head,2,400);
+    head= updateAtpostion(head,4,1000);
     printNode(head);
     return 0;
 }
