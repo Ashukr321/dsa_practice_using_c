@@ -12,6 +12,11 @@ void printArray(int arr[],int n){
     
 }
 
+void swap(int*a,int *b){
+    int temp = *a ; 
+    *a  = *b; 
+    *b = temp;
+}
 // buuble sort 
 void bubbleSort(int arr[],int n){
     //outer loop for the number of iteration
@@ -20,13 +25,17 @@ void bubbleSort(int arr[],int n){
         for (int j = 0; j <n-1-i ; j++)
         {
             // compare two adjacent number arr[j] and arr[j+1];
-            
+
             if (arr[j]>arr[j+1])
             {
                 // swap the number 
-                int temp = arr[j];
-                arr[j]= arr[j+1];
-                arr[j+1]=temp;
+                // int temp = arr[j];
+                // arr[j]= arr[j+1];
+                // arr[j+1]=temp;
+
+                // another way to swap two number 
+                
+                swap(&arr[j],&arr[j+1]);
             }
             
         }
