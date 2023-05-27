@@ -27,6 +27,7 @@ struct Node *creatNode(int data){
     return node;  
 }
 
+
 // printNode 
 void printNode(struct Node *head){
     struct Node *temp= head;
