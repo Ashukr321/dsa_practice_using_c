@@ -24,7 +24,11 @@ void selectonSort(int arr[], int n)
                 min_idx = j;
             }
         }
-        swap(&arr[i], &arr[min_idx]);
+        // swap(&arr[i], &arr[min_idx]);
+        int temp  = arr[min_idx];
+        arr[min_idx] = arr[i];
+        arr[i] = temp;
+        
     }
 }
 // print array
