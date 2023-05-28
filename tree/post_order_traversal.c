@@ -19,20 +19,19 @@ struct Node *createNode(int data)
     return newNode;
 }
 
-// preorder traversal
-struct Node *preOrder(struct Node *root)
+
+
+// postorder traversal
+struct Node *postOrder(struct Node *root)
 {
     if (root == NULL)
     {
         return NULL;
     }
-
+    postOrder(root->left);
+    postOrder(root->right);
     printf("%d ", root->data);
-    preOrder(root->left);
-    preOrder(root->right);
 }
-
-
 // create node
 int main()
 {
@@ -55,6 +54,7 @@ int main()
     n3->left = n6;
     n3->right = n7;
 
-    preOrder(root);
+    printf("post order traversal \n");
+    postOrder(root);
     return 0;
 }
