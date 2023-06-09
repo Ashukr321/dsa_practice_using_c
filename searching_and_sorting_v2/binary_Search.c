@@ -19,11 +19,12 @@ int binarySearch(int arr[], int l, int r, int key)
             return binarySearch( arr,  mid+1, r,  key);
         }
         
-        
     }
     return -1;
   
 }
+
+// main method start here ...
 
 int main()
 {
