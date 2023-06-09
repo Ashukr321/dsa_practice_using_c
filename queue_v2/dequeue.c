@@ -14,6 +14,7 @@ int isEmpty();
 void enqueue(int data);
 void dequeue();
 void printQueue();
+void getSize();
 // main method start here
 int main()
 {
@@ -25,6 +26,8 @@ int main()
     enqueue(5);
     enqueue(6);
     printQueue();
+    getSize();
+
     // dequeue();
     return 0;
 }
@@ -80,26 +83,32 @@ void enqueue(int data)
     }
 }
 
-// dequeue operation 
-// dquueu opeartion always take from the front of the queueu 
-void dequeue(){
-    if (isEmpty()==1)
+// dequeue operation
+// dquueu opeartion always take from the front of the queueu
+void dequeue()
+{
+    if (isEmpty() == 1)
     {
         printf("queue is aleady empty \n");
         return;
     }
-    
+
     int temp = queue[front];
     front++;
 
     printf("%d data is deleted  \n", temp);
-    
 }
 
-void printQueue(){
+void printQueue()
+{
     for (int i = front; i <= rear; i++)
     {
-        printf("%d ",queue[i]);
+        printf("%d ", queue[i]);
     }
-    
+}
+
+void getSize()
+{
+    int s = rear;
+    printf("\nsize of queue is %d \n", s);
 }
